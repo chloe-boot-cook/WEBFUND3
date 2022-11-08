@@ -2,9 +2,14 @@ console.log("hello-world!")
 const currentTime = document.getElementById('current-time');
 const totalTime = document.getElementById('total-time');
 const playPauseButton = document.getElementById('play-pause-button');
+const track1button = document.getElementById('track1button')
 const seekBar = document.getElementById('seek-bar');
-const audio = new Audio("audio/onlymp3.to - Wham! - Club Tropicana (Official 4K Video)-bVFM2mCPnhQ-192k-1658023739690.webm");
+const audio = new Audio();
 let isSeeking = false; 
+
+track1button.onclick = function(){
+    audio.src = 'audio/onlymp3.to - Wham! - Club Tropicana (Official 4K Video)-bVFM2mCPnhQ-192k-1658023739690.webm'
+}
 
 playPauseButton.onclick = function () {
     if (audio.paused) {
